@@ -243,7 +243,7 @@ When nil, punctuation chars will not be matched.
 (defcustom avy-ignored-modes '(image-mode doc-view-mode pdf-view-mode)
   "List of modes to ignore when searching for candidates.
 Typically, these modes don't use the text representation."
-  :type 'list)
+  :type '(repeat symbol))
 
 (defcustom avy-single-candidate-jump t
   "In case there is only one candidate jumps directly to it."
@@ -253,11 +253,11 @@ Typically, these modes don't use the text representation."
   "List of event types, i.e. key presses, that delete the last
 character read.  The default represents `C-h' and `DEL'.  See
 `event-convert-list'."
-  :type 'list)
+  :type '(repeat character))
 
 (defcustom avy-escape-chars '(?\e ?\C-g)
   "List of characters that quit avy during `read-char'."
-  :type 'list)
+  :type '(repeat character))
 
 (defvar avy-ring (make-ring 20)
   "Hold the window and point history.")
